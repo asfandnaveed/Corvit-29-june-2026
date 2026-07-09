@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .btn{
+            background-color: burlywood;
+            width: 150px;
+            height: 50px;
+            border: 2px solid saddlebrown;
+            border-radius: 30px;
+            color: saddlebrown;
+            font-size: 18px;
+            position: relative;
+        }
+        .notification{
+            position: absolute;
+            background-color: brown;
+            top: 0px;
+            right: 0px;
+            color: white;
+            border-radius: 30px;
+            padding: 2px;
+            transform: translate(35%,-35%);
+            
+
+        }
+
+        .box1{
+            width: 300px;
+            height: 300px;
+            background-color: bisque;
+        }
+
+        .box2{
+            width: 300px;
+            height: 900px;
+            background-color: coral;
+        }
+        .fixed{
+            position: sticky;
+            right: 0px;
+            top: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+
+       
+    </style>
+</head>
+<body>
+
+    <button class="btn">Notification
+        <span class="notification">9+</span>
+    </button>
+
+    <div class="box1">box1</div>
+
+    <div class="fixed">Hello</div>
+    
+    <div class="box2">box2</div>
+
+   
+</body>
+</html>
