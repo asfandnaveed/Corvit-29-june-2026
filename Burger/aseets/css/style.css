@@ -11,11 +11,13 @@
 
 body {
     background: linear-gradient(50deg, var(--gradient-color-1), var(--gradient-color-2));
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .h-subheading {
     color: var(--text-h1-color);
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
@@ -70,6 +72,22 @@ body {
     padding-right: 1.8rem;
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
+}
+
+.hot-items-heading{
+    color: var(--text-h1-color);
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.hot-items-subheading{
+    color: var(--text-h1-color);
+    font-size: 1.4rem;
+    
+}
+.p-background{
+    background-image: url("../images/products/product_card.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 
