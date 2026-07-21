@@ -1,71 +1,125 @@
-
-:root{
-    --gradient-color-1:#FFAB53;
-    --gradient-color-2:#FFD0A7;
-    --bg-button:white;
-    --text-h1-color:white;
-    --primary:#FF6947;
+:root {
+    --gradient-color-1: #FFAB53;
+    --gradient-color-2: #FFD0A7;
+    --bg-button: white;
+    --text-h1-color: white;
+    --primary: #FF6947;
+    --spacing: 3rem;
+    --opcaity: 0.6;
 
 }
 
-body{
-    background: linear-gradient(50deg,var(--gradient-color-1),var(--gradient-color-2));
+body {
+    background: linear-gradient(50deg, var(--gradient-color-1), var(--gradient-color-2));
 }
-.h-subheading{
+
+.h-subheading {
     color: var(--text-h1-color);
-    font-size: 1.5rem;
+    font-size: 0.9rem;
     font-weight: 500;
 }
-.h-heading{
+
+.h-heading {
     color: var(--text-h1-color);
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1.2;
 }
 
-@media (max-width : 786px){
 
-    .h-heading{
-        font-size: 3rem;
-    }
-}
 
-.explore-more i{
+.explore-more i {
     color: white;
     font-size: 3rem;
 }
 
-.explore-more a{
+.explore-more a {
     color: var(--text-h1-color);
     text-decoration: none;
     font-size: 1.2rem;
     font-size: 1rem;
     font-weight: 400;
 }
-.rating-icon i{
+
+.rating-icon i {
     color: var(--primary);
 }
-.rating-box-text{
+
+.rating-box-text {
     color: var(--primary);
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     font-weight: 400;
 }
-.rating-box{
-    width: 250px;
-    padding-top: 1.2rem;
-    padding-bottom: 1.2em;
-    height: 110px;
+
+.rating-box {
+    width: 220px;
+    height: 90px;
     margin-bottom: 2rem;
+    margin-top: 2rem;
 }
-.rating-box1-rotate{
+
+.rating-box1-rotate {
     transform: rotate(8deg);
     opacity: 0.7;
 }
-.btn-explore{
+
+.btn-explore {
     color: var(--gradient-color-1);
     font-weight: 500;
     padding-left: 1.8rem;
     padding-right: 1.8rem;
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
+}
+
+
+@media (min-width : 576px) {
+
+    .h-heading {
+        font-size: 2rem;
+    }
+
+    .h-subheading {
+        font-size: 1.1rem;
+    }
+
+    .rating-box {
+        width: 150px;
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+        height: 80px;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width : 786px) {
+
+    .h-heading {
+        font-size: 3rem;
+    }
+
+    .h-subheading {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width : 992px) {
+
+    .h-heading {
+        font-size: 4rem;
+    }
+
+    .h-subheading {
+        font-size: 1.5rem;
+    }
+
+    .rating-box {
+        width: 250px;
+        height: 110px;
+        margin-bottom: 2rem;
+    }
+
+    .rating-box-text {
+        font-size: 1.2rem; 
+    }
 }
