@@ -87,9 +87,23 @@ body {
 }
 .p-background{
     background-image: url("../images/products/product_card.png");
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
+    height: 350px;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
+.p-background div , .p-background i{
+    color: var(--text-h1-color);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.p-background img{
+    width: 220px;
+    filter: drop-shadow(5px 5px 10px #292929b4);
+}
+
+
 
 
 @media (min-width : 576px) {
