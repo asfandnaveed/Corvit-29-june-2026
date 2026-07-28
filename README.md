@@ -16,4 +16,9 @@ _________________________________________________________________
 # FOOD DASH WEBSITE DESIGN FIGMA
 https://www.figma.com/design/PdG5rDOIxtjLZdLHk4oStl/Food-Website-UI-Design-Tutorial-in-Figma--Using-No-Cod--Community---Copy-?node-id=0-1&p=f&t=3M262nYRboThXtEQ-0
 
+_________________________________________________________________
+
+# FOOD HUT WEBSITE DESIGN FIGMA
+https://www.figma.com/design/i8rZcxefdAJgUsrpmklYCO/Food-Hut---Food-Ordering-Responsive-Design---Community-?node-id=0-1&p=f&t=atjLqrqhHLCgqRRr-0
+
 
