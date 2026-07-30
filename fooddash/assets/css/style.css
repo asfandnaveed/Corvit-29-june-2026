@@ -5,6 +5,9 @@ body{
 .bg-header{
     background-color: #FFF2E6;
 }
+.logo{
+    width: 140px;
+}
 .h-heading{
     
     font-size: 3rem;
