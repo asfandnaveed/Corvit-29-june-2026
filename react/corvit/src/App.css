@@ -1,6 +1,5 @@
 body{
-    font-family: "Lexend", sans-serif;
-    overflow-x: hidden;
+    font-family: "Lexend";
 }
 
 .bg-header{
@@ -10,9 +9,10 @@ body{
     width: 140px;
 }
 .h-heading{
+    
     font-size: 3rem;
     font-weight: 700;
-    line-height: 1.2;
+   
 }
 
 .h-heading span{
@@ -73,12 +73,13 @@ body{
     color: #FF6000;
     text-decoration: none;
     font-size: 1.2rem;
+    
 }
 .bg-product-color{
     background-color: #FFEFE6;
 }
 .menu-spacing{
-    margin-bottom: 8rem;
+    margin-bottom:8rem;
 }
 .p-menu-name{
     font-size: 1.3rem;
@@ -100,6 +101,7 @@ body{
     background-color: #FF6000;
     border-color: #FF6000;
     font-size: 0.8rem;
+    
 }
 .btn-buy-now:hover{
     background-color: #ee5b00;
@@ -114,69 +116,7 @@ body{
     font-weight: 400;
 }
 .products-spacing{
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
 }
-
-/* Feature Box Responsive Positioning */
-.feature-banner-box {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 85%;
-    z-index: 10;
-}
-
-/* Media Queries for Responsive Design */
-@media (max-width: 991.98px) {
-    .h-heading {
-        font-size: 2.2rem;
-    }
-    .header-img {
-        padding-bottom: 1rem;
-        margin-top: 1.5rem;
-    }
-    .feature-banner-box {
-        position: relative;
-        top: auto;
-        left: auto;
-        transform: none;
-        width: 100%;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
-    .indian-section {
-        margin-top: 3rem;
-    }
-    .menu-spacing {
-        margin-bottom: 5rem;
-    }
-    .hero-btn {
-        width: 50% !important;
-    }
-}
-
-@media (max-width: 767.98px) {
-    .h-heading {
-        font-size: 1.75rem;
-    }
-    .hero-btn {
-        width: 80% !important;
-    }
-    .products-spacing {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-    .menu-spacing {
-        margin-bottom: 4rem;
-    }
-}
-
-@media (max-width: 575.98px) {
-    .hero-btn {
-        width: 100% !important;
-    }
-}
-
 

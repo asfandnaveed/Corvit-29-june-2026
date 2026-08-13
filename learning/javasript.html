@@ -33,15 +33,73 @@
     <div class="mb-5">
         <label for="" class="form-label">Password</label>
         <div class="position-relative w-25">
-            <input type="password" class="form-control">
-            <div class="bg-primary px-3 py-0 position-absolute top-50 end-0 translate-middle-y me-3 text-white rounded-2" >
-                <i class="bi bi-eye-fill"></i>
+            <input id="inpPass" type="password" class="form-control" placeholder="***********">
+            <div onclick="showPassword();" class="bg-primary px-3 py-0 position-absolute top-50 end-0 translate-middle-y me-3 text-white rounded-2" >
+                <i id="passEye" class="bi bi-eye-fill"></i>
             </div>
         </div>
     </div>
 
 
+    <div class="container">
+        <div id="products" class="row"></div>
+    </div>
+    <button class="btn btn-success" onclick="getProducts();">Products</button>
+
+    
+
     <script>
+
+        
+
+        function getProducts (){
+            var products = ["Steak","prawns","muffins","biryani","macroni"];//array
+            
+            var htmlData = document.getElementById("products");
+
+
+            products.map( (data)=>{
+                console.log(data);
+            } );
+
+
+
+            // for(var i=0; i < products.length; i++){
+
+            //     htmlData.innerHTML += `
+            //     <div class="col-3">
+            //         <div class="card p-3">
+            //             <div class="card-body">
+            //                 <div class="card-title">
+            //                     ${products[i]}
+            //                 </div>
+            //             </div>
+            //         </div>
+            //     </div>
+            //     `;
+            // }
+            
+        
+        }   
+
+
+        function showPassword(){
+            var input = document.getElementById("inpPass");
+
+            var eyeIcon = document.getElementById("passEye");
+
+            if(input.type == 'password'){
+                input.type= 'text';
+                eyeIcon.classList.remove('bi-eye-fill');
+                eyeIcon.classList.add('bi-eye-slash-fill');
+
+            }else{
+                input.type='password';
+                eyeIcon.classList.remove('bi-eye-slash-fill');
+                eyeIcon.classList.add('bi-eye-fill');
+            }
+
+        }
 
         function calculateAge() {
             var age = document.getElementById("ageInput").value;
