@@ -6,26 +6,26 @@ function News() {
   const [isLoading, setisLoading] = useState(true);
   const getData = async () => {
     const response = await fetch("https://newsapi.org/v2/top-headlines?country=us&apiKey=API_KEY");
-    const result= await response.json();
-     setTopNews(result);
-     setisLoading(false); 
+    const result = await response.json();
+    setTopNews(result);
+    setisLoading(false);
   }
-  useEffect(()=>{
+  useEffect(() => {
     getData();
   }, [])
 
-if(isLoading){
-  return(
-    <div>Loading...</div>
-  );
-}
+  if (isLoading) {
+    return (
+      <div>Loading...</div>
+    );
+  }
   return (
     <div className="news-app-container py-4">
 
       {/* ==========================================
           HEADER & NAVIGATION BAR
       ========================================== */}
-      
+
 
       <header className="news-header mb-4">
         <div className="row align-items-center g-3">
@@ -159,59 +159,69 @@ if(isLoading){
 
           <div className="row g-4">
 
+
+
             {/* Article Card 1 */}
-            <div className="col-md-6 col-12">
-              <div className="news-card">
-                <div className="card-img-wrapper">
-                  <img
-                    src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2289545363.jpg?c=16x9&q=w_800,c_fill"
-                    alt="Article Thumbnail"
-                    className="card-news-img"
-                  />
-                  <span className="source-badge">CNN</span>
-                </div>
 
-                <div className="p-3 d-flex flex-column justify-content-between flex-grow-1">
-                  <div>
-                    <div className="d-flex align-items-center justify-content-between mb-2">
-                      <span className="news-meta-item">
-                        <i className="bi bi-clock"></i> Aug 12, 03:11 AM
-                      </span>
-                      <span className="badge bg-secondary bg-opacity-25 text-info px-2 py-1">World</span>
-                    </div>
+            {topnews.articles.map((article) => (
 
-                    <h4 className="news-card-title mb-2">
-                      Live updates: More than 200 dead in Colombia earthquake, with rescuers unable to reach epicenter yet - CNN
-                    </h4>
-
-                    <p className="news-card-desc mb-3">
-                      The Colombian government has declared a state of national disaster after a powerful earthquake killed at least 200 people and injured hundreds more. Follow for the latest updates.
-                    </p>
+              <div className="col-md-6 col-12">
+                <div className="news-card">
+                  <div className="card-img-wrapper">
+                    <img
+                      src={article.urlToImage}
+                      alt="Article Thumbnail"
+                      className="card-news-img"
+                    />
+                    <span className="source-badge">CNN</span>
                   </div>
 
-                  <div>
-                    <div className="news-meta-item mb-3">
-                      <i className="bi bi-pen"></i>
-                      <span className="author-tag">Michael Rios, Maureen Chowdhury, Rocio Munoz...</span>
+                  <div className="p-3 d-flex flex-column justify-content-between flex-grow-1">
+                    <div>
+                      <div className="d-flex align-items-center justify-content-between mb-2">
+                        <span className="news-meta-item">
+                          <i className="bi bi-clock"></i> Aug 12, 03:11 AM
+                        </span>
+                        <span className="badge bg-secondary bg-opacity-25 text-info px-2 py-1">World</span>
+                      </div>
+
+                      <h4 className="news-card-title mb-2">
+                      {article.title}
+                      </h4>
+
+                      <p className="news-card-desc mb-3">
+                        The Colombian government has declared a state of national disaster after a powerful earthquake killed at least 200 people and injured hundreds more. Follow for the latest updates.
+                      </p>
                     </div>
 
-                    <div className="d-flex align-items-center justify-content-between pt-2 border-top border-secondary border-opacity-25">
-                      <a
-                        href="https://www.cnn.com/2026/08/11/world/live-news/colombia-earthquake-latest"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn btn-read-more px-3 py-1.5"
-                      >
-                        Read Story <i className="bi bi-box-arrow-up-right ms-1"></i>
-                      </a>
-                      <button className="btn-action-icon" title="Save">
-                        <i className="bi bi-bookmark"></i>
-                      </button>
+                    <div>
+                      <div className="news-meta-item mb-3">
+                        <i className="bi bi-pen"></i>
+                        <span className="author-tag">Michael Rios, Maureen Chowdhury, Rocio Munoz...</span>
+                      </div>
+
+                      <div className="d-flex align-items-center justify-content-between pt-2 border-top border-secondary border-opacity-25">
+                        <a
+                          href={article.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn btn-read-more px-3 py-1.5"
+                        >
+                          Read Story <i className="bi bi-box-arrow-up-right ms-1"></i>
+                        </a>
+                        <button className="btn-action-icon" title="Save">
+                          <i className="bi bi-bookmark"></i>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+
+            ))}
+
+
+
 
 
 
