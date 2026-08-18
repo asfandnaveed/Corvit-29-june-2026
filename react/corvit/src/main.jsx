@@ -6,9 +6,11 @@ import './index.css'
 import App from './App.jsx'
 import Home from './pages/Home/Home.jsx';
 import News from './pages/news/News.jsx';
+import Shop from './pages/shop/Shop.jsx';
+import Detail from './pages/shop/Detail.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <News />
+    <App />
   </StrictMode>,
 )

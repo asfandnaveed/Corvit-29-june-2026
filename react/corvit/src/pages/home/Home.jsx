@@ -7,10 +7,16 @@ function Home() {
 
   const getData = async () => {
 
-    const response = await fetch("http://api.weatherapi.com/v1/current.json?key=API_KEY&q=Lahore");
-    const result = await response.json();
-    setWeatherData(result);
-    setIsLoading(false);
+    try {
+      const response = await fetch("http://api.weatherapi.com/v1/current.json?key=API_KEY&q=Lahore");
+      const result = await response.json();
+      setWeatherData(result);
+      
+    }catch(e){
+      console.log(e);
+    }finally{
+      setIsLoading(false);
+    }
   };
 
   useEffect(() => {

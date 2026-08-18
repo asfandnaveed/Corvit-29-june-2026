@@ -3,16 +3,31 @@ import './News.css';
 
 function News() {
   const [topnews, setTopNews] = useState();
-  const [isLoading, setisLoading] = useState(true);
+  const [isLoading, setisLoading] = useState(true); 
+
+
+
   const getData = async () => {
-    const response = await fetch("https://newsapi.org/v2/top-headlines?country=us&apiKey=API_KEY");
-    const result = await response.json();
-    setTopNews(result);
-    setisLoading(false);
+
+    try {
+      const response = await fetch("https://newsapi.org/v2/top-headlines?country=us&apiKey=API_KEY");
+      const result = await response.json();
+      setTopNews(result);
+
+    } catch (err) {
+
+    } finally {
+      setisLoading(false);
+    }
+
   }
+
+
   useEffect(() => {
     getData();
   }, [])
+
+
 
   if (isLoading) {
     return (
@@ -186,7 +201,7 @@ function News() {
                       </div>
 
                       <h4 className="news-card-title mb-2">
-                      {article.title}
+                        {article.title}
                       </h4>
 
                       <p className="news-card-desc mb-3">
