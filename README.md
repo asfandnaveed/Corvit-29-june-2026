@@ -29,12 +29,12 @@ https://www.figma.com/design/1Y9cNx9OsBWHJxnet4iZxi/Weather-Web--Community---Cop
 _________________________________________________________________
 
 # PLATED & Co. WEBSITE DESIGN FIGMA
-figma.com/design/UeNB7R0Xo0CfB55xOVrEDa/🍽%EF%B8%8F-Plated---Co.-–-Premium-Restaurant-Website-Template--Community---Copy-?t=kz62pv3H73wXyD5g-0
+https://www.figma.com/design/UeNB7R0Xo0CfB55xOVrEDa/%F0%9F%8D%BD%EF%B8%8F-Plated---Co.-%E2%80%93-Premium-Restaurant-Website-Template--Community---Copy-?node-id=1-622&p=f&t=MnCsV22cNUNsJFT5-0
 
 _________________________________________________________________
 
-# FOOD HUT WEBSITE DESIGN FIGMA
+# SHOPERY WEBSITE DESIGN FIGMA
 
-https://www.figma.com/design/i8rZcxefdAJgUsrpmklYCO/Food-Hut---Food-Ordering-Responsive-Design---Community-?node-id=11-5&p=f&t=kz62pv3H73wXyD5g-0
+https://www.figma.com/design/WzvvIwGn8HPd8ATqXC6vsP/Shopery---Organic-eCommerce-Shop-Website-Figma-Template--Community---Community-?node-id=1-4&p=f&t=MnCsV22cNUNsJFT5-0
 
 
