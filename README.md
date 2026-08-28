@@ -26,8 +26,15 @@ _________________________________________________________________
 # WEATHER WEBSITE DESIGN FIGMA
 https://www.figma.com/design/1Y9cNx9OsBWHJxnet4iZxi/Weather-Web--Community---Copy-?node-id=0-1&p=f&t=Z6OdZTHNyp0bEklM-0
 
+_________________________________________________________________
 
-# API LINK
-https://projects.analogenterprise.com/api.php
+# PLATED & Co. WEBSITE DESIGN FIGMA
+https://www.figma.com/design/UeNB7R0Xo0CfB55xOVrEDa/%F0%9F%8D%BD%EF%B8%8F-Plated---Co.-%E2%80%93-Premium-Restaurant-Website-Template--Community---Copy-?node-id=1-622&p=f&t=MnCsV22cNUNsJFT5-0
+
+_________________________________________________________________
+
+# SHOPERY WEBSITE DESIGN FIGMA
+
+https://www.figma.com/design/WzvvIwGn8HPd8ATqXC6vsP/Shopery---Organic-eCommerce-Shop-Website-Figma-Template--Community---Community-?node-id=1-4&p=f&t=MnCsV22cNUNsJFT5-0
 
 
