@@ -1,7 +1,25 @@
 import React, { useState } from 'react';
 import './Detail.css';
+import { useParams } from 'react-router-dom';
 
 function Detail() {
+
+  const [productDetail, setProductDetail] = useState();
+  const { id } = useParams();
+
+  const getProductdetails = async () => {
+    try {
+      const response = await fetch("https://projects.analogenterprise.com/api.php?id=" + id);
+      const result = await response.json();
+      setProductDetail(result);
+
+    }catch(e){
+
+    }
+  };
+
+
+
   // Gallery active image
   const galleryImages = [
     { id: 1, label: "Front Angle", url: "https://projects.analogenterprise.com/images/06.png" },

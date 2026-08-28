@@ -3,6 +3,7 @@ import Home from "./pages/home/Home"
 import News from "./pages/news/News"
 import Shop from "./pages/shop/Shop"
 import Detail from "./pages/shop/Detail"
+import Register from "./pages/auth/Register"
 
 
 
@@ -17,7 +18,9 @@ function App() {
           <Route path="/home" element={ <Home />}/>
           <Route path="/news" element={ <News />} />
           <Route path="/shop" element={ <Shop/>} />
-          <Route path="/shop/detail" element={ <Detail/>} />
+          <Route path="/shop/detail/:id" element={ <Detail/>} />
+          <Route path="/register" element={ <Register/>}/>
+          
 
         </Routes>
       </BrowserRouter>

@@ -916,7 +916,7 @@ function Shop() {
                     key={product.id}
                     className={viewMode === 'grid' ? 'col-lg-4 col-md-6 col-12' : 'col-12'}
                   >
-                    <Link to="/shop/detail">
+                    <Link to={`/shop/detail/${product.id}`}>
                       <div className={`product-card ${viewMode === 'list' ? 'list-view' : ''}`}>
                         {/* Image Box */}
                         <div className="product-img-box">
