@@ -4,6 +4,8 @@ import News from "./pages/news/News"
 import Shop from "./pages/shop/Shop"
 import Detail from "./pages/shop/Detail"
 import Register from "./pages/auth/Register"
+import Login from "./pages/auth/Loginnew"
+// import Login from "./pages/auth/Login"
 
 
 
@@ -20,6 +22,7 @@ function App() {
           <Route path="/shop" element={ <Shop/>} />
           <Route path="/shop/detail/:id" element={ <Detail/>} />
           <Route path="/register" element={ <Register/>}/>
+          <Route path="/login" element={ <Login/>}/>
           
 
         </Routes>

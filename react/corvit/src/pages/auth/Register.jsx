@@ -12,6 +12,35 @@ function Register() {
     const [confirmpassword , setConfirmPassword] = useState("");
 
 
+    const sendData =async (e)=>{
+
+        e.preventDefault();
+
+
+        const user = {
+            email:email,
+            name:name,
+            phone:phone,
+            address:address,
+            gender:gender,
+            password:password
+        };
+
+        const response =await fetch('http://localhost:3000/api/v1/user/register' ,{
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify(user)
+        });
+
+        const result   = await response.json();
+
+        console.log(result)
+
+    };
+
+
     return (
         <div className="register-page">
 
@@ -36,7 +65,7 @@ function Register() {
                             </div>
 
 
-                            <form>
+                            <form onSubmit={sendData}>
 
                                 {/* Name */}
                                 <div className="mb-3">
@@ -48,6 +77,8 @@ function Register() {
                                         type="text"
                                         className="form-control register-input"
                                         placeholder="Enter your full name"
+                                        onChange={(e)=>(setName(e.target.value))}
+                                        value={name}
                                     />
                                 </div>
 
@@ -66,6 +97,8 @@ function Register() {
                                             type="tel"
                                             className="form-control register-input"
                                             placeholder="Enter phone number"
+                                            onChange={ (e)=>( setPhone(e.target.value) ) }
+                                            value={phone}
                                         />
 
                                     </div>
@@ -78,7 +111,7 @@ function Register() {
                                             Gender
                                         </label>
 
-                                        <select className="form-select register-input">
+                                        <select className="form-select register-input" onChange={(e)=>( setGender(e.target.value) )} value={gender}>
 
                                             <option value="">
                                                 Select gender
@@ -110,6 +143,8 @@ function Register() {
                                         type="email"
                                         className="form-control register-input"
                                         placeholder="Enter your email"
+                                        onChange={(e)=>( setEmail(e.target.value) )}
+                                        value={email}
                                     />
 
                                 </div>
@@ -126,6 +161,8 @@ function Register() {
                                         className="form-control register-textarea"
                                         placeholder="Enter your delivery address"
                                         rows="3"
+                                        onChange={(e)=>( setAddress(e.target.value))}
+                                        value={address}
                                     ></textarea>
 
                                 </div>
@@ -144,6 +181,8 @@ function Register() {
                                             type="password"
                                             className="form-control register-input"
                                             placeholder="Create a password"
+                                            onChange={(e)=>(setPassword(e.target.value))}
+                                            value={password}
                                         />
 
                                         <button
@@ -171,6 +210,8 @@ function Register() {
                                             type="password"
                                             className="form-control register-input"
                                             placeholder="Confirm your password"
+                                            onChange={(e)=>(setConfirmPassword(e.target.value))}
+                                            value={confirmpassword}
                                         />
 
                                         <button
