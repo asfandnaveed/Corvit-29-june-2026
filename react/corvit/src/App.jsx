@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 import Home from "./pages/home/Home"
 import News from "./pages/news/News"
 import Shop from "./pages/shop/Shop"
@@ -11,6 +11,7 @@ import Login from "./pages/auth/Loginnew"
 
 function App() {
 
+  const isLoggedIn = sessionStorage.getItem('loginData');
 
   return (
     <>
@@ -19,8 +20,8 @@ function App() {
           <Route path="/" element={ <Shop/>}/>
           <Route path="/home" element={ <Home />}/>
           <Route path="/news" element={ <News />} />
-          <Route path="/shop" element={ <Shop/>} />
-          <Route path="/shop/detail/:id" element={ <Detail/>} />
+          <Route path="/shop" element={ isLoggedIn ? <Shop/>  : <Navigate to={'/login'}/>} />
+          <Route path="/shop/detail/:id" element={isLoggedIn ? <Detail/> : <Navigate to={'/login'}/> } />
           <Route path="/register" element={ <Register/>}/>
           <Route path="/login" element={ <Login/>}/>
           
